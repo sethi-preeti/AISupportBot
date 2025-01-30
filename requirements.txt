@@ -1,0 +1,9 @@
+# Document loading, retrieval methods and text splitting
+langchain_community
+# Local vector store via Chroma
+langchain_chroma
+# Local inference and embeddings via Ollama
+langchain_ollama
+# Web Loader
+beautifulsoup4
+requests
