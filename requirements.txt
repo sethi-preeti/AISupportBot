@@ -7,3 +7,4 @@ langchain_ollama
 # Web Loader
 beautifulsoup4
 requests
+streamlit
