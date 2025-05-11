@@ -69,8 +69,8 @@ def ingest_website(local_embeddings, vector_store):
         
 if __name__=="__main__":
     OLLAMA_BASE_URL = "http://100.68.93.4:11434"
-    CHROMA_HOST = "http://100.68.93.4:8100"  
-    CHROMA_PORT = 8100
+    CHROMA_HOST = "http://100.68.93.4:8000"  
+    CHROMA_PORT = 8000
     chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
     local_embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url=OLLAMA_BASE_URL)
     vector_store = Chroma(

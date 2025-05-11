@@ -9,6 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 import chromadb
 import ingester
 import time
+import os
 
 '''
 # Loading the datas
@@ -24,12 +25,12 @@ local_embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url=OLLAMA_BA
 vectorstore = Chroma.from_documents(documents=all_splits, embedding=local_embeddings)
 '''
 
-OLLAMA_BASE_URL = "http://100.68.93.4:11434"
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL")
 
 def get_retriever():
     # Using ingester and server db
-    CHROMA_HOST = "http://100.68.93.4:8100"  
-    CHROMA_PORT = 8100
+    CHROMA_HOST = os.environ.get("CHROMA_HOST")
+    CHROMA_PORT = 8000
     chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
     local_embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url=OLLAMA_BASE_URL)
     vector_store = Chroma(
