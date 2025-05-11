@@ -4,7 +4,11 @@ export OLLAMA_BASE_URL
 export CHROMA_HOST
 export BASE_URL
 
-run: 
+run:
+	. venv/bin/activate && streamlit run app.py
+	
+
+test: 
 	. venv/bin/activate && python3 rag.py
 
 ingest: 
