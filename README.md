@@ -77,10 +77,11 @@ The Makefile provides all the commands needed to run the code.
 7) Run the api for your QA bot.  
    `make api`  
    This will serve by flask app to run the api on http://127.0.0.1:5000    
-   To test the api, GET the invoke request in browser with question as a parameter: http://localhost:5000/invoke?question=How%20can%20I%20automate%20my%20Business?  
+   To test the api, GET the invoke request in browser with question as a parameter:  
+   http://localhost:5000/invoke?question=How%20can%20I%20automate%20my%20Business  
    ![API ss](images/api_ss.png)  
 
-8) Run the api as a docker image.
+9) Run the api as a docker image.
     ```
    docker build -t api .
    docker run -p 5000:5000 api
