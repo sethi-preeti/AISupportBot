@@ -13,7 +13,7 @@ test:
 ingest: 
 	. venv/bin/activate && python3 src/ingester.py > ingester_logs.txt
 
-setup: setup_local
+setup: setup_local_ollama
 	python3 -m venv venv
 	. venv/bin/activate && pip install -r requirements.txt
 

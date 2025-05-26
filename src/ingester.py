@@ -9,6 +9,11 @@ from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 import chromadb
 import time
+import os
+
+BASE_URL = os.environ.get("BASE_URL")
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL")
+CHROMA_HOST = os.environ.get("CHROMA_HOST")
 
 def get_sub_urls(base_url):
     """Fetch the sub URLs from the base URL."""
@@ -33,7 +38,6 @@ def url_exists(url, vector_store):
     return len(results["metadatas"]) > 0
 
 def ingest_website(local_embeddings, vector_store):
-    BASE_URL = "https://www.automatebusiness.com/"
     urls = get_sub_urls(BASE_URL)
     urls.append(BASE_URL)
     # urls = [BASE_URL]
@@ -68,8 +72,6 @@ def ingest_website(local_embeddings, vector_store):
         # vectorstore = Chroma.from_documents(documents=all_splits, embedding=local_embeddings, persist_directory="vectordb")
         
 if __name__=="__main__":
-    OLLAMA_BASE_URL = "http://100.68.93.4:11434"
-    CHROMA_HOST = "http://100.68.93.4:8000"  
     CHROMA_PORT = 8000
     chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
     local_embeddings = OllamaEmbeddings(model="nomic-embed-text", base_url=OLLAMA_BASE_URL)
