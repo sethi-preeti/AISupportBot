@@ -6,7 +6,6 @@ export BASE_URL
 
 run:
 	. venv/bin/activate && streamlit run app.py
-	
 
 test: 
 	. venv/bin/activate && python3 rag.py
