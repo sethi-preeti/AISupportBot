@@ -12,7 +12,7 @@ A QnA chatbot to answer customer queries on your website, ready-to-use with no n
 ## Demo
 I have used a sample website (after due permission from the website owner) to extract information and answer customer questions based on it. 
 
-The sample webiste is: [Automate Your Business](https://www.automatebusiness.com/)  
+The sample website is: [Automate Your Business](https://www.automatebusiness.com/)  
 The demo shows streamlit app to answer customer questions based on website content.
 ![Working Demo](images/example.gif)
 ## How to run
