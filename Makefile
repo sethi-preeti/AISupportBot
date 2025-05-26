@@ -5,13 +5,13 @@ export CHROMA_HOST
 export BASE_URL
 
 run:
-	. venv/bin/activate && streamlit run app.py
+	. venv/bin/activate && streamlit run src/app.py
 
 test: 
-	. venv/bin/activate && python3 rag.py
+	. venv/bin/activate && python3 src/rag.py
 
 ingest: 
-	. venv/bin/activate && python3 ingester.py > ingester_logs.txt
+	. venv/bin/activate && python3 src/ingester.py > ingester_logs.txt
 
 setup: setup_local
 	python3 -m venv venv
@@ -23,4 +23,4 @@ setup_local_ollama:
 	. venv/bin/activate && ollama pull nomic-embed-text
 
 api:
-	. venv/bin/activate && python3 api.py
+	. venv/bin/activate && python3 src/api.py
