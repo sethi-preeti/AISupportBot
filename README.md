@@ -14,7 +14,7 @@ I have used a sample website (after due permission from the website owner) to ex
 
 The sample webiste is: [Automate Your Business](https://www.automatebusiness.com/)  
 The demo shows streamlit app to answer customer questions based on website content.
-![Working Demo](example.gif)
+![Working Demo](images/example.gif)
 ## How to run
 
 ### Setup environment
@@ -59,11 +59,13 @@ The Makefile provides all the commands needed to run the code.
   
 3) Run the QA tool in terminal to test the RAG (retreival Augmented Generation) based on ingested embeddings.  
     `make test`  
-    This will run the QA tool in terminal to allow testing.  
+    This will run the QA tool in terminal to allow testing.
+    ![Terminal ss](images/terminal_test_ss.png)  
 
 4) Run the streamlit web app to use the tool in web.  
    `make run`  
    This will run your app on http://localhost:8501/
+   ![ Streamlit app](images/streamlit_app_ss.png)  
 
 5) Run the streamlit app as a docker image.
    ```
@@ -76,6 +78,7 @@ The Makefile provides all the commands needed to run the code.
    `make api`  
    This will serve by flask app to run the api on http://127.0.0.1:5000  
    To test the api, GET the invoke request in browser with question as a parameter: http://localhost:5000/invoke?question=How%20can%20I%20automate%20my%20Business?
+   ![API ss](images/api_ss.png)  
 
 8) Run the api as a docker image.
     ```
