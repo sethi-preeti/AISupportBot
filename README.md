@@ -18,7 +18,7 @@ The demo shows streamlit app to answer customer questions based on website conte
 ## How to run
 
 ### Setup environment
-1) Get Website URL and set environment variable BASE_URL in Makefile.
+1) Get Website URL and set environment variable BASE_URL in Makefile.  
    `export BASE_URL="<insert-your-website-url-here>"`
    
 3) Setup Ollama to run LLMs locally.
