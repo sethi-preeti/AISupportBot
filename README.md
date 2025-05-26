@@ -38,7 +38,8 @@ The demo shows streamlit app to answer customer questions based on website conte
      docker run chromadb/chroma
      ```
      This will host the chromadb, by default, on localhost:8000. Now set the environment variable CHROMA_HOST to point to this URL.  
-     `export CHROMA_HOST="http://127.0.0.1:8000"`  
+     `export CHROMA_HOST="http://127.0.0.1:8000"`
+     
       Note: The CHROMA_HOST and OLLAMA_BASE_URL variables provide flexibility to use a different server machine to host your models and db. This can be utilized in case 
       there is   a different more powerful server available to host these services and descrese processing time.
 
