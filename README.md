@@ -29,8 +29,8 @@ The demo shows streamlit app to answer customer questions based on website conte
         ollama pull llama3.1:8b
         ollama pull nomic-embed-text
       ```
-   - Set environment variable OLLAMA_BASE_URL in Makefile. By default, all models are automatically served on localhost:11434.
-    `export OLLAMA_BASE_URL="http://127.0.0.1:11434"`
+   - Set environment variable OLLAMA_BASE_URL in Makefile. By default, all models are automatically served on localhost:11434.  
+    `export OLLAMA_BASE_URL="http://127.0.0.1:11434"`  
     
 3) Setup chromadb for storing vector embeddings locally. We will use the official docker image for [chromadb](https://hub.docker.com/r/chromadb/chroma).
      ```
@@ -76,8 +76,8 @@ The Makefile provides all the commands needed to run the code.
    
 7) Run the api for your QA bot.  
    `make api`  
-   This will serve by flask app to run the api on http://127.0.0.1:5000  
-   To test the api, GET the invoke request in browser with question as a parameter: http://localhost:5000/invoke?question=How%20can%20I%20automate%20my%20Business?
+   This will serve by flask app to run the api on http://127.0.0.1:5000    
+   To test the api, GET the invoke request in browser with question as a parameter: http://localhost:5000/invoke?question=How%20can%20I%20automate%20my%20Business?  
    ![API ss](images/api_ss.png)  
 
 8) Run the api as a docker image.
